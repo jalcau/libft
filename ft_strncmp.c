@@ -6,7 +6,7 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 18:30:11 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/01 17:41:44 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/03 18:55:06 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-

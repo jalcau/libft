@@ -6,7 +6,7 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 17:36:29 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/01 17:46:45 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/03 16:42:19 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,3 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 	dst[i] = '\0';
 	return (ft_strlen(dst) + ft_strlen(&src[j]));
 }
-
-

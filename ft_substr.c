@@ -6,7 +6,7 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 18:00:39 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/01 18:24:07 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/03 18:55:17 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	dest[j] = '\0';
 	return (dest);
-}
-
-int	main(void)
-{
-	char	s1[30] = "hola soy Jorge";
-
-	printf("%s", ft_substr(s1, 1, 9));
 }

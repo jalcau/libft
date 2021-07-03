@@ -6,14 +6,14 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 17:35:32 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/01 17:36:37 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/03 17:50:25 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 #include<stdlib.h>
- int	ft_atoi(const char *str)
- {
+int	ft_atoi(const char *str)
+{	
 	int	c;
 	int	s;
 	int	res;
@@ -40,4 +40,3 @@
 	}
 	return (res * s);
 }
-

@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/01 17:37:53 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 18:55:31 by jalcauza         ###   ########.fr       */
+/*   Created: 2021/07/03 16:34:46 by jalcauza          #+#    #+#             */
+/*   Updated: 2021/07/03 17:06:03 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include<stdio.h>
-#include"libft.h"
-#include "ft_strlen.c"
-#include "ft_strchr.c"
-#include "ft_substr.c"
-char	*ft_strtrim(char const *s1, char const *set)
+#include"ft_memcpy.c"
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	j;
-	int		i;
+	size_t	i;
+	char	*dest;
+	char	*source;
 
 	i = 0;
-	j = 0;
-	if (s1[0] == '\0' || set[0] == '\0')
-		return (0);
-	while (s1[i] != '\0' && ft_strchr(set, s1[i]))
-		i++;
-	j = ft_strlen(s1);
-	while (j != 0 && ft_strchr(set, s1[j]))
-		j--;
-	return (ft_substr(s1, i, (j + 1) - i));	
+	dest = (char *)dst;
+	source = (char *)src;
+	if (dest > source)
+	{
+		while (len--)
+			dest[len] = source[len];
+	}
+	else if (dest < source)
+		ft_memcpy(dst, src, len);
+	return (dst);
 }

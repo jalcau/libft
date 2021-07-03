@@ -6,7 +6,7 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 18:47:41 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/01 17:46:49 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/03 18:54:02 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	if (s1[0] == '\0' || s2 == '\0' || !(new_str = (char *) malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
+	if (s1[0] == '\0' || s2 == '\0' || !(new_str = (char *) malloc(ft_strlen(s1) + ft_strlen( s2) + 1)))
 		return (0);
 	i = 0;
 	while (s1[i] != '\0')
@@ -32,12 +32,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new_str[i] = '\0';
 	printf("%ld", ft_strlen(new_str));
 	return (new_str);
-}
-
-int	main(void)
-{
-	char	s1[] = "holaa";
-
-	char	s2[] = "holaa";
-	printf("\n%s", ft_strjoin (s1, s2));
 }

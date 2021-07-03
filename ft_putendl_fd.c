@@ -3,18 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/27 12:45:16 by marvin            #+#    #+#             */
-/*   Updated: 2021/06/27 12:45:16 by marvin           ###   ########.fr       */
+/*   Updated: 2021/07/03 18:52:54 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_putstr_fd.c"
-void ft_putendl_fd(char *s, int fd)
+#include"libft.h"
+void	ft_putendl_fd(char *s, int fd)
 {
-    char c = '\n';
-    ft_putstr_fd(s,fd);
-    ft_putchar_fd(c,fd);
-    
+	if (s != NULL)
+	{
+		ft_putstr_fd (s, fd);
+		ft_putchar_fd ('\n', fd);
+	}
 }

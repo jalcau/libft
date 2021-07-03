@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jalcauza <alcauza@student.42.fr>           +#+  +:+       +#+        */
+/*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 18:09:59 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/06/08 18:21:59 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/03 16:42:31 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,3 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	}
 	return ((void *)string_dst);
 }
-
-
