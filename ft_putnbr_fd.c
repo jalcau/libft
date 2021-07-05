@@ -6,13 +6,11 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 17:40:06 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 18:36:42 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:28:12 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_putstr_fd.c"
 #include"libft.h"
-#include"ft_itoa.c"
 static unsigned int	ft_module_fd(int n)
 {
 	if (n < 0)

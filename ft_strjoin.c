@@ -6,12 +6,12 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 18:47:41 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 18:54:02 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/03 19:32:39 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_strlen.c"
+
 #include<stdio.h>
 char	*ft_strjoin(char const *s1, char const *s2)
 {
