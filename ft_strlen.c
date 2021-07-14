@@ -6,11 +6,10 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 20:16:54 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 17:25:03 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:49:29 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
 #include"libft.h"
 size_t	ft_strlen(const char *s)
 {

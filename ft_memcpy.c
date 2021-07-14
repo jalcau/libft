@@ -6,7 +6,7 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 19:10:56 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 19:33:14 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/14 16:17:21 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	string_dst = (unsigned char *)dest;
 	string_src = (unsigned char *)src;
 	if (string_dst[0] == '\0' && string_src[0] == '\0')
-		return (0);
+		return (NULL);
 	while (i < n)
 	{
 		string_dst[i] = string_src[i];
 		i++;
 	}
-	return ((void *)string_dst);
+	return (string_dst);
 }

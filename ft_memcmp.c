@@ -6,13 +6,11 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 19:10:21 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 19:33:13 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:47:39 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-#include<string.h>
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t			i;

@@ -6,13 +6,14 @@
 #    By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/15 20:36:50 by jalcauza          #+#    #+#              #
-#    Updated: 2021/07/03 18:00:19 by jalcauza         ###   ########.fr        #
+#    Updated: 2021/07/14 16:13:50 by jalcauza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= 	libft.a
 
-SRCS	=	ft_isalnum.c\
+SRCS	=	ft_atoi.c\
+			ft_isalnum.c\
 			ft_isalpha.c\
 			ft_isascii.c\
 			ft_isdigit.c\

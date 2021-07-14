@@ -6,24 +6,27 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 18:30:11 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 18:55:06 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/14 18:10:14 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
-#include<string.h>
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	size_t		i;
-	const char	*string1 = s1;
-	const char	*string2 = s2;
+	unsigned int	i;
 
 	i = 0;
-	while (i < n)
+	if (n == 0)
+		return (0);
+	while ((str1[i] != '\0' && str2[i] != '\0') && i < n)
 	{
-		if (string1[i] != string2[i])
-			return ((unsigned char)(string1[i]) - (unsigned char)string2[i]);
+		if (str1[i] != str2[i])
+			return (((unsigned char)str1[i] - (unsigned char)str2[i]));
 		i++;
 	}
+	if (i == n)
+		return (((unsigned char)str1[i - 1] - (unsigned char)str2[i - 1]));
+	if (str1[i] == '\0' || str2[i] == '\0')
+		return (((unsigned char)str1[i] - (unsigned char)str2[i]));
 	return (0);
 }

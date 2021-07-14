@@ -6,13 +6,11 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 20:17:05 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 17:10:35 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:49:44 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
-#include<string.h>
 char	*ft_strnstr(const char *s, const char *need, size_t len)
 {
 	size_t	i;

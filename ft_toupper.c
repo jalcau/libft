@@ -6,10 +6,11 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 20:31:20 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/06/22 17:59:26 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 18:16:10 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
 int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)

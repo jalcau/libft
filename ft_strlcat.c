@@ -6,13 +6,11 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 17:36:29 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 16:42:19 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 17:18:28 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_strlen.c"
-#include <stdio.h>
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t	i;

@@ -6,7 +6,7 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 18:00:39 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 18:55:17 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 19:14:58 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (s[0] == '\0' || !(dest = (char *)malloc(len + 1)))
+	dest = (char *)malloc(sizeof(char) * len + 1);
+	if (s[0] == '\0' || !(dest))
 		return (0);
 	i = start;
 	j = 0;
-	while (s[i] != '\0' && j < len)
+	while (s[i] != '\0' && j < len && start < len)
 	{
 		dest[j] = s[i];
 		j++;

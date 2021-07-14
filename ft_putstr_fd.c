@@ -6,12 +6,11 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 17:36:19 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/05 16:29:00 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 19:03:17 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
-
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
@@ -19,8 +18,10 @@ void	ft_putstr_fd(char *s, int fd)
 	if (s != NULL)
 	{
 		i = 0;
-		while (i < ft_strlen(s))
+		while (s[i] != '\0')
+		{
 			ft_putchar_fd(s[i], fd);
-		i++;
+			i++;
+		}
 	}
 }

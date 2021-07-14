@@ -6,13 +6,11 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 16:34:46 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 17:06:03 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:47:47 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
-#include"ft_memcpy.c"
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;

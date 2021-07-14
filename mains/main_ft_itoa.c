@@ -6,14 +6,14 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 17:27:43 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 17:35:24 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:54:04 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../libft.h"
 #include"../ft_itoa.c"
 #include<stdio.h>
-int main()
+int	main(void)
 {
 	printf("%s", ft_itoa(1));
 }

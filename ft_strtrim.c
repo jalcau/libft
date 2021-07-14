@@ -6,15 +6,11 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 17:37:53 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 18:55:31 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 18:54:18 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
 #include"libft.h"
-#include "ft_strlen.c"
-#include "ft_strchr.c"
-#include "ft_substr.c"
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	j;
@@ -29,5 +25,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = ft_strlen(s1);
 	while (j != 0 && ft_strchr(set, s1[j]))
 		j--;
-	return (ft_substr(s1, i, (j + 1) - i));	
+	return (ft_substr(s1, i, (j + 1) - i));
 }

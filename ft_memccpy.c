@@ -6,11 +6,10 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 18:09:59 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 19:33:10 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:47:27 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
 #include<string.h>
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {

@@ -6,7 +6,7 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/15 20:16:16 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 19:33:05 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:46:47 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,5 @@ int	ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z' ))
 		return (1);
-	return (0);
-}
-
-int	main(void)
-{
-	printf("%d", ft_isalpha('1'));
 	return (0);
 }
