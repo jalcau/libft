@@ -6,29 +6,36 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/22 18:47:41 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/14 15:42:16 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/17 18:03:09 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*new_str;
-	int		i;
-	int		j;
+	size_t	len;
+	size_t	j;
+	size_t	i;
+	char	*dst;
 
-	new_str = (char *)malloc(sizeof(char) * ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (s1[0] == '\0' || s2[0] == '\0' || !(new_str))
-		return (0);
+	j = 0;
 	i = 0;
-	while (s1[i] != '\0')
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
+	dst = malloc(len + 1);
+	if (!dst)
+		return (NULL);
+	while (s1[j] != '\0')
 	{
-		new_str[i] = s1[i];
+		dst[j] = s1[j];
+		j++;
+	}
+	while (s2[i] != '\0')
+	{
+		dst[i + j] = s2[i];
 		i++;
 	}
-	j = 0;
-	while (s2[j] != '\0')
-		new_str[i++] = s2[j++];
-	new_str[i] = '\0';
-	return (new_str);
+	dst[i + j] = '\0';
+	return (dst);
 }

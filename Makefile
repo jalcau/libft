@@ -6,7 +6,7 @@
 #    By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/15 20:36:50 by jalcauza          #+#    #+#              #
-#    Updated: 2021/07/14 16:13:50 by jalcauza         ###   ########.fr        #
+#    Updated: 2021/07/19 20:44:37 by jalcauza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,6 @@ SRCS	=	ft_atoi.c\
 			ft_tolower.c\
 			ft_toupper.c\
 			ft_bzero.c\
-			ft_memccpy.c\
 			ft_memchr.c\
 			ft_memcmp.c\
 			ft_memcpy.c\
@@ -42,6 +41,7 @@ SRCS	=	ft_atoi.c\
 			ft_split.c\
 			ft_itoa.c\
 			ft_strmapi.c\
+			ft_striteri.c\
 			ft_putchar_fd.c\
 			ft_putstr_fd.c\
 			ft_putendl_fd.c\
@@ -53,7 +53,7 @@ BONUS	=	ft_lstnew.c\
 			ft_lstadd_front.c\
 			ft_lstsize.c\
 			ft_lstlast.c\
-			ft_lstadd_back.c
+			
 
 BONUS_OBJS	= $(BONUS:.c=.o)
 
@@ -63,7 +63,7 @@ CC		= gcc
 
 RM		= rm -f
 
-CFLAGS	= 
+CFLAGS	= -Wall -Wextra -Werror
 
 INCS	= libft.h 
 

@@ -6,35 +6,32 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 17:35:32 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/05 19:36:53 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/19 17:08:43 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int	ft_atoi(const char *str)
-{	
-	int	c;
-	int	s;
-	int	res;
+{
+	size_t				i;
+	int					sinal;
+	unsigned long int	result;
 
-	c = 0;
-	s = 1;
-	res = 0;
-	while ((str[c] >= '\t' && str[c] <= '\r') || str[c] == ' ')
-		c++;
-	if (str[c] == '-')
+	i = 0;
+	sinal = 1;
+	result = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		s = s * (-1);
-		c++;
+		if (str[i] == '-')
+			sinal *= -1;
+		i++;
 	}
-	if (str[c] == '+')
+	while (str[i] >= 48 && str[i] <= 57)
 	{
-		s = s * (1);
-		c++;
+		result = result * 10 + (str[i] - '0');
+		i++;
 	}
-	while (str[c] >= '0' && str[c] <= '9')
-	{
-		res = (str[c] - '0') + (res * 10);
-		c++;
-	}
-	return (res * s);
+	return (result * sinal);
 }

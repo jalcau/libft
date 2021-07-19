@@ -6,7 +6,7 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 18:42:06 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/17 19:07:53 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/19 16:32:14 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-    new -> next = *lst;
-    *lst = new;
+	new -> next = *lst;
+	*lst = new;
 }

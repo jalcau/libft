@@ -6,7 +6,7 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/08 20:13:28 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/14 16:54:10 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/17 16:24:31 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	if (src[0] == '\0')
+	if (src == NULL)
 		return (0);
 	srscsize = ft_strlen(src);
 	if (dstsize != 0)

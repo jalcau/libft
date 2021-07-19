@@ -6,7 +6,7 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 17:35:47 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/03 19:33:03 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/17 16:06:31 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*tab;
 
-	if (!(tab = (char *) malloc (nmemb * size)))
+	tab = (char *)malloc(nmemb * size);
+	if (!tab)
 		return (0);
 	ft_bzero(tab, nmemb * size);
 	return (tab);

@@ -6,24 +6,70 @@
 /*   By: jalcauza <jalcauza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/01 17:37:53 by jalcauza          #+#    #+#             */
-/*   Updated: 2021/07/05 18:54:18 by jalcauza         ###   ########.fr       */
+/*   Updated: 2021/07/17 18:33:11 by jalcauza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
+#include<stdio.h>
+static	int	ft_check(char c, char const *set)
+{
+	int	i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (c == set[i])
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+static	int	ft_len(char const *s1, char const *set)
+{
+	size_t	i;
+	size_t	count;
+
+	i = ft_strlen(s1) - 1;
+	count = 0;
+	while (ft_check(s1[count], set) == 0)
+		count++;
+	if (count == ft_strlen(s1))
+		return (-1);
+	while (ft_check(s1[i], set) == 0)
+	{
+		i--;
+		count++;
+	}
+	return (count);
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	j;
-	int		i;
+	size_t		i;
+	size_t		j;
+	size_t		len;
+	char		*cpy;
 
 	i = 0;
 	j = 0;
-	if (s1[0] == '\0' || set[0] == '\0')
-		return (0);
-	while (s1[i] != '\0' && ft_strchr(set, s1[i]))
+	if (!s1 && set)
+		return (NULL);
+	if (s1 && !set)
+		return (ft_strdup(s1));
+	if (!s1 && !set)
+		return (NULL);
+	len = ft_strlen(s1) - ft_len(s1, set);
+	cpy = (char *)malloc(sizeof(char) * len + 1);
+	if (!(cpy))
+		return (NULL);
+	if (ft_len(s1, set) == -1)
+		len = 0;
+	while (ft_check(s1[i], set) == 0)
 		i++;
-	j = ft_strlen(s1);
-	while (j != 0 && ft_strchr(set, s1[j]))
-		j--;
-	return (ft_substr(s1, i, (j + 1) - i));
+	while (j < len)
+		cpy[j++] = s1[i++];
+	cpy[j] = '\0';
+	return (cpy);
 }
